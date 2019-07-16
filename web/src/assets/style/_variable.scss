@@ -1,0 +1,59 @@
+
+$colors:(
+    "white":#fff,
+    'light':#f9f9f9,
+    'light-1':#d4d9de,
+    'info':#4b67af,
+    "blue":#4394e4,
+    'blue-b':#00b5e5,
+    'primary':#db9e3f,
+    'dark':#222,
+    'dark-1':#333,
+    'count':#7a7a80, // 播放量颜色
+    'lime':#b6afa8, //白灰色
+    "gray":#9fa0a0, // 日期灰色
+    'lime-1':#464f73,
+    'black':#000,
+    'black-1':#666,
+    'black-7':#777
+);
+
+$border-color:map-get($colors,'light-1');
+
+$font-base-size:1rem;
+$fs:(
+    'xxs':.615385,
+    'xs':0.7692, // 10px
+    'sm':0.923,  // 12px
+    'md':1,// 13px
+    'lg':1.0962, // 14px
+    'cg':1.230769 // 16px     
+);
+
+$flex-jc:(
+    'start':flex-start,
+    'end':flex-end,
+    'center':center,
+    'between':space-between,
+    'around':space-around
+);
+
+$spacing-types:(
+    'm':margin,
+    'p':padding
+);
+$spacing-direction:(
+    't':top,
+    'l':left,
+    'r':right,
+    'b':bottom
+);
+$spacing-base-size:1rem;
+$spacing-sizes:(
+    0:0,
+    1:0.25,
+    2:0.5,
+    3:1,
+    4:1.5,
+    5:3
+);

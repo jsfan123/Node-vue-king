@@ -1,0 +1,206 @@
+@import '../style/variable.scss';
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 13px;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    background-color: #f1f1f1;
+}
+a {
+    color: #999;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+// 利用sass设置颜色工具类
+
+
+// 定义字体颜色的工具类
+@each $colorkey,$colorvalue in $colors {
+   .text-#{$colorkey}{
+     color: $colorvalue
+   } 
+   .bg-#{$colorkey}{
+       background-color: $colorvalue
+   }
+}
+// 字体大小
+
+@each $fskey,$fsvalue in $fs {
+    .fs-#{$fskey}{
+        font-size: $fsvalue * $font-base-size!important;
+    }
+}
+
+// 定义字体布局样式
+@each $align in (left,center,right) {
+    .text-#{$align}{
+        text-align: $align!important;
+    }
+}
+
+// 定义flex 布局类
+.flex{
+    display: flex;
+}
+
+// 主轴排列类
+@each $key,$val in $flex-jc {
+    .jc-#{$key}{
+        justify-content: $val
+    } 
+}
+
+$flex-ai:(
+    'start':flex-start,
+    'end':flex-end,
+    'center':center,
+    'baseline':baseline,
+    'stretch':stretch
+);
+// 副轴排列类
+@each $key,$val in $flex-ai {
+    .ai-#{$key}{
+        align-items: $val
+    }
+}
+// 主轴旋转
+.flex-direction{
+    flex-direction: column;
+}   
+// 强制换行
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+// spacing 边距
+
+// m-0,p-0
+@each $typekey,$typeval in $spacing-types {
+    @each $sizekey,$sizeval in $spacing-sizes {
+        .#{$typekey}-#{$sizekey}{
+             #{$typeval}: $sizeval * $spacing-base-size
+        }
+    }
+}
+@each $typekey,$typeval in $spacing-types {
+    @each $sizekey,$sizeval in $spacing-sizes {
+// mx-0,px-0
+        .#{$typekey}x-#{$sizekey}{
+            #{$typeval}-left: $sizeval * $spacing-base-size;
+            #{$typeval}-right: $sizeval * $spacing-base-size;
+        }
+// my-0,py-0
+        .#{$typekey}y-#{$sizekey}{
+             #{$typeval}-top: $sizeval * $spacing-base-size;
+            #{$typeval}-bottom: $sizeval * $spacing-base-size;
+        }
+    }
+}
+
+// mt-0,ml-0,mt-0,mb-0
+@each $typekey,$typeval in $spacing-types {
+    @each $directionkey,$directionval in $spacing-direction {
+        @each $sizekey,$sizeval in $spacing-sizes {
+            .#{$typekey}#{$directionkey}-#{$sizekey}{
+                #{$typeval}-#{$directionval}:$sizeval * $spacing-base-size
+            }
+        }  
+    }
+    
+}
+
+$numbers:(
+    "1":1px,
+    "2":2px,
+    "3":3px,
+    "4":4px
+
+);
+// 边框线 
+@each $key,$val in $spacing-direction {
+    @each $numkey,$numval in $numbers{
+        .b#{$key}-#{$numkey}{
+            border-#{$val}:$numval solid $border-color;
+        }
+    }
+}
+
+// button
+button{
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    border-radius: 2px;
+}
+
+// active
+.nav{
+    display: flex;
+    .nav-item{
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+        border-bottom:2px solid transparent;
+        cursor: pointer;
+        &.active{
+            color: map-get($colors,'primary');
+            border-bottom: 2px solid map-get($colors,'primary');
+        }
+        &.nav-inverse{
+            color: map-get($colors,'white');
+            border-bottom: 2px solid map-get($colors,'white');
+        }
+    }
+}
+
+// w-100 h-100
+.w-100{
+    width: 100%;
+}
+.h-100{
+    height: 100%;
+}
+.w-25{
+    width: 25%;
+}
+
+// sprite
+
+.sprite{
+    background: url("../images/index.png") no-repeat 0 0;
+    background-size: 28.8462rem;
+    display: inline-block;
+    &.sprite-news{
+        background-position: 63.546% 15.517%;
+        width: 1.7692rem;
+        height: 1.5385rem;
+    }
+    &.sprite-packup{
+        background-position: 38.577% 52.076%;
+        width: 0.7692rem;
+        height:0.7692rem;
+    }
+}
+
+// text-overflow
+.text-ellipsis{
+    padding-right: .5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
