@@ -23,7 +23,7 @@
 
 1. 首先先去复制 在github上生成的 仓库地址
 
-![1559904809916](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1559904809916.png)
+![1559904809916](https://github.com/jsfan123/Node-vue-king/blob/master/readmeImg/1559904809916.png)
 
 点击链接地址的右侧图标可以复制
 
@@ -40,7 +40,7 @@
 
 5. 里面包含了 这几个文件
 
-![1559905302258](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1559905302258.png)
+![1559905302258](https://github.com/jsfan123/Node-vue-king/blob/master/readmeImg/1559905302258.png)
 
 #### 到这里你的本地仓库就创建完毕了
 
