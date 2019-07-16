@@ -11,7 +11,7 @@
 
 
 
-![1559904302986](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1559904302986.png)
+![1559904302986](https://github.com/jsfan123/Node-vue-king/blob/master/readmeImg/1559904302986.png)
 
 这两个选项的意思是
 
