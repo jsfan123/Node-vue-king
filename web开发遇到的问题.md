@@ -162,7 +162,7 @@ $color:(
 
 - 使用工具来确定精灵图中小图片的位置 [spriteCow](<http://www.spritecow.com/>)
 
-![1560838843709](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560838843709.png)
+![1560838843709](https://github.com/jsfan123/Node-vue-king/blob/master/readmeImg/1560838843709.png)
 
 - 2* 表示图片大小为原图片大小的一半
 - % 表示位置用 百分比 来显示
@@ -242,7 +242,7 @@ Vue.component('my-card',Card)
 </my-card>
 ```
 
-效果图如右：![1560850410325](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560850410325.png)
+效果图如右：![1560850410325](https://github.com/jsfan123/Node-vue-king/blob/master/readmeImg/1560850410325.png)
 
 ### 6.如何在 `my-card` 的 起始**标签**和 **结束标签**之间 添加内容
 
